@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripció de la nostra webapp.">
+    <link rel="stylesheet" href="index.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>  
+    <title>
+      Nom de la webapp
+    </title>
+  </head>
+  <body>
+    <div id="superior">
+      Nom de la webapp
+    </div>
+    <div id="seccio_0" class="seccio">
+      <div id="inici_sessio">
+        <div>
+          Inici de sessió
+        </div> 
+      </div>
+      <div id="credencials">
+        <div>
+          <label for="nom_usuari">Nom d'usuari</label>
+          <input type="text" id="nom_usuari">
+        </div>
+        <div>
+          <label for="contrasenya">Contrasenya</label>        
+          <input type="password" id="contrasenya">
+        </div>
+      </div>
+      <div id="botons_sessio">
+        <button onclick="inici_sessio()">Inicia sessió</button>
+        <button onclick="nou_usuari()">Nou usuari</button>
+      </div>         
+    </div>
+    <div id="seccio_1" class="seccio">
+      Secció 1
+    </div>
+    <div id="seccio_2" class="seccio">
+      <div id="div_foto">
+        <img id="foto" onclick="mostra_foto(0)">
+        <i id="icona_camera" class="fa-solid fa-image"></i>
+      </div>
+      <div id="div_control">
+          <label for="obturador">
+            <i class="fa-solid fa-circle-dot"></i>
+          </label>
+          <input type="file" accept="image/*" id="obturador" capture="camera" />
+          <i id="desa" class="fa-solid fa-check" onclick="desa_foto()"></i>
+      </div>
+    </div>
+    <div id="seccio_3" class="seccio">
+      <div id="llista_titol">
+        <i class="fa-solid fa-image"></i>
+        <i class="fa-solid fa-calendar-days"></i>
+        <i class="fa-solid fa-trash"></i>       
+      </div>
+      <div id="llista_fotos">
+      </div>
+    </div>
+    <div id="seccio_4" class="seccio">
+    </div>
+    <div id="menu">      
+      <i id="boto_1" class="fa-solid fa-house" onclick="canvia_seccio(1)"></i>     
+      <i id="boto_2" class="fa-solid fa-camera" onclick="canvia_seccio(2)"></i>
+      <i id="boto_3" class="fa-solid fa-image" onclick="canvia_seccio(3)"></i>
+      <i id="boto_4" class="fa-solid fa-map" onclick="canvia_seccio(4)"></i>
+      <i class="fa-solid fa-right-from-bracket" onclick="tanca_sessio()"></i>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="div_gran">
+      <img id="foto_gran" onclick="retorn_a_seccio()" />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

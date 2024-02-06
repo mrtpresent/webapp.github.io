@@ -1,0 +1,226 @@
+html { 
+    height: -webkit-fill-available;
+}
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: -webkit-fill-available;
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #FCDEE0;
+}
+#superior {
+    display: flex;
+    height: 8vmax;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmax;
+    color: white;
+    background-color: #950E17;
+}
+.seccio {
+    flex: 1;
+    display: none;
+}
+#seccio_0 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmax;
+}
+#seccio_1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmax;
+}
+#seccio_2 {
+    flex-direction: column;
+}
+#seccio_3 {
+    flex-direction: column;
+    justify-content: space-around;
+}
+#inici_sessio {
+    display: flex;
+    align-items: center;
+}
+#credencials {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 3vmax;
+    margin: 5vmin;
+}
+#credencials div {
+    margin-bottom: 1vmin;
+}
+#credencials input {
+    max-width: 20vmax;
+    font-size: 3vmax;
+}
+#botons_sessio {
+    display: flex;
+    align-items: center;
+}
+#botons_sessio button {
+    font-size: 3vmax;
+    padding: 2vmin;
+    margin: 1vmin;
+}
+#menu {
+    display: flex;
+    height: 8vmax;
+}
+#menu i {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #950E17;
+    font-size: 5vmax;
+    cursor: pointer;
+}
+#div_foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#icona_camera {
+    font-size: 40vmin;
+    color: #950E17;
+}
+#foto {
+    max-width: 60vmin;
+    max-height: 60vmin;
+    cursor: pointer;
+}
+#div_control {
+    height: 25vmax;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#div_control i{
+    cursor: pointer;
+    font-size: 20vmin;
+    color: green;
+}
+#obturador {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+}
+#canvas, #desa {
+    display: none;
+}
+#div_gran {
+    display: none;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    max-height: 100vh;
+    max-height: 100svh;
+    max-height: -webkit-fill-available;
+}
+#foto_gran {
+    max-width: 95vmin;
+    max-height: 95vmax;
+    cursor: pointer;
+}
+#llista_titol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#llista_titol i {
+    font-size: 4vmax;
+    color:#950E17;
+}
+#llista_titol i:nth-child(1) {
+    flex: 2;
+}
+#llista_titol i:nth-child(2) {
+    flex: 3;
+}
+#llista_titol i:nth-child(3) {
+    flex: 1;
+}
+#llista_fotos {
+    height: 70vmax;
+    overflow-y: scroll;
+}
+#llista_fotos::-webkit-scrollbar {
+    display: none;
+}
+.llista_fila {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.llista_fila div {
+    flex: 2;
+}
+.llista_fila img {
+    width: 10vmax;
+    height: 10vmax;
+    cursor: pointer;
+}
+.llista_fila span {
+    flex: 3;
+    font-size: 2vmax;
+}
+.llista_fila i {
+    flex: 1;
+    color: #950E17;
+    font-size: 4vmax;
+    cursor: pointer;
+}
+.ocult {
+    display: none !important;
+}
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+        flex-flow: row-reverse;
+    }
+    #superior {
+        display: none;
+    }
+    #menu {
+        flex-direction: column;
+        width: 8vmax;
+        height: auto;
+    }
+    #seccio_2 {
+        flex-direction: row;
+    }
+    #div_foto {
+        flex-direction: column;
+    }
+    #div_control {
+        width: 25vmax;
+        height: auto;
+        flex-direction: column;
+    }
+    #div_gran {
+        max-height: 100vh;
+        max-height: 100svh;
+    }
+    #foto_gran {
+        transform: rotate(-90deg);
+    }
+    #llista_fotos {
+        height: 70vmin;
+    }
+    .llista_fila img {
+        width: 10vmin;
+        height: 10vmin;
+    }
+}
